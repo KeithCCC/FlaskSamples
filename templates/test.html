@@ -1,0 +1,24 @@
+
+<table class="table">
+{% for n in cat1 %}
+<tr>
+    {% if loop.index0 == 0 %}
+    <th> {{n}} </th>
+        {% if num >= 2 %}
+        <th> {{cat2[loop.index0]}} </th>
+        {% endif %}
+        {% if num >=3 %}
+        <th> {{cat3[loop.index0]}} </th>
+        {% endif %}
+    {% else %}
+    <td> {{n}} </td>
+        {% if num >= 2 %}
+        <td> {{cat2[loop.index0]}} </td>
+        {% endif %}
+        {% if num >= 3 %}
+        <td> {{cat3[loop.index0]}} </td>
+        {% endif %}
+    {% endif %}
+</tr>
+{% endfor %}
+</table>
